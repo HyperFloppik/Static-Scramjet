@@ -144,8 +144,9 @@
       font-size: 3rem;
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 24px;
+      margin-bottom: 48px;
       letter-spacing: -1px;
+      margin-top: 40px;
     }
 
     .loader {
@@ -185,8 +186,6 @@
   </div>
 
   <h1 class="title">Ethyrnal's Browser</h1>
-  <div class="clock" id="clock">00:00</div>
-  <div class="date" id="date"></div>
 
   <form class="search-box" id="searchForm">
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -256,15 +255,6 @@
       $('#loader').classList.add('show');
       window.parent?.postMessage({ type: 'navigate', url }, '*');
     };
-
-    // Clock
-    function updateClock() {
-      const now = new Date();
-      $('#clock').textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
-      $('#date').textContent = now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-    }
-    updateClock();
-    setInterval(updateClock, 1000);
 
     // Search
     $('#searchForm').onsubmit = e => {

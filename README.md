@@ -7,5 +7,5 @@ Features:
 4. Simple style
 
 How to change the default wisp server:
-1. Locate "wss://vseesa.quasar.ploteando.com/wisp/" in script.js and embed.html
+1. Locate "wss://glseries.net/wisp/" in script.js and embed.html
 2. Switch them out for your wisp server
